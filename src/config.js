@@ -1,0 +1,1 @@
+export default API_URL = 'https://agusmao-tindev-api.herokuapp.com';

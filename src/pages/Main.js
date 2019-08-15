@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import io from "socket.io-client";
 
+import API_URL from '../config';
+
 import "./Main.css";
 
 import api from "../services/api";
@@ -40,7 +42,7 @@ export default function Main({ match }) {
   
 
   useEffect(() => {
-    const socket = io(process.env.API_URL, {
+    const socket = io(API_URL, {
       query: {
         user: match.params.id
       }
